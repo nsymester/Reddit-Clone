@@ -2,11 +2,17 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { browserHistory } from 'react-router';
+
 import App from './containers/App';
+import Routes from './routes';
 // import * as registerServiceWorker from './utils/registerServiceWorker';
 import * as serviceWorker from './utils/serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Routes history={browserHistory} />,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
